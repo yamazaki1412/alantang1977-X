@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml","http://epg.51zmt.top:8000/e.xml","https://epg.pw/xmltv/epg_CN.xml","https://epg.pw/xmltv/epg_HK.xml","https://epg.pw/xmltv/epg_TW.xml"
-#EXTINF:-1 group-title="更新日期",2026-01-31
+#EXTINF:-1 group-title="更新日期",2026-02-01
 https://codeberg.org/alantang/photo/raw/branch/main/Robot.mp4
 #EXTINF:-1 group-title="🍎┃广东频道",广州综合
 https://tencentplay.gztv.com/live/zonghes.m3u8$IPV4•线路1
@@ -1018,7 +1018,7 @@ https://m3u8.channel.dzsm.com/nmip-media/channellive/channel104601/playlist.m3u8
 #EXTINF:-1 group-title="🍓┃湾区频道",寰宇新聞台
 https://gdfire2.67890123.cn:8088/live/hyxw01.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",ROCK Action
-http://mayi.home.kg/smt.php$IPV4
+http://180.213.174.225:9901/tsfile/live/1027_1.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",TVB星河
 http://r.jdshipin.com/sXuuD$IPV4•线路1
 #EXTINF:-1 group-title="🍓┃湾区频道",TVB星河
@@ -1027,6 +1027,8 @@ http://r.jdshipin.com/Voac4$IPV4•线路2
 http://iot-mqqt.111yao.cn:8080/live/diyp_xingkong.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",AMC電影台
 http://122.117.71.103:8559/http/61.222.53.250:8092/upload/115/AMC_TS-1111_1.m3u8$IPV4
+#EXTINF:-1 group-title="🍓┃湾区频道",Animax
+http://180.213.174.225:9901/tsfile/live/1037_1.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",美亚电影台
 https://live.tvfix.org/live/mydy/index.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",美亚电影粤
@@ -1041,6 +1043,10 @@ http://r.jdshipin.com/ndGgS$IPV4•线路2
 http://cdn.163189.xyz/live/hoy/stream.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",三立新闻
 http://live4play.uk/livehttpplay$IPV4
+#EXTINF:-1 group-title="🍓┃湾区频道",东森超视
+https://p2hs.vzan.com/slowlive/821481626725612419/live.m3u8$IPV4•线路1
+#EXTINF:-1 group-title="🍓┃湾区频道",东森超视
+https://pull-hsbj.vzan.com/v/slowlive_821481626725612419.flv$IPV4•线路2
 #EXTINF:-1 group-title="🍓┃湾区频道",东森电影
 http://mytv.cdn.com.mp/live/dsdy/stream.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",Now剧集
@@ -1049,6 +1055,8 @@ https://bxtv.3a.ink/api.php$IPV4
 http://43.138.170.29:35455/douyu/9403712$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",SUPER Kids Channel
 http://49.113.179.174:4022/udp/238.125.2.216:5140$IPV4
+#EXTINF:-1 group-title="🍓┃湾区频道",Channel 5 HD
+http://180.213.174.225:9901/tsfile/live/1041_1.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",東森电影国
 http://cfss.cc/cdn/hy/21059581.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🍓┃湾区频道",東森电影国
@@ -1073,64 +1081,14 @@ http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8$IPV4
 http://143.244.60.30/TBS/index.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",无线新闻
 http://r.jdshipin.com/CkuBd$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-01咪咕
-http://j.s.bkpcp.top/jj/cctv1$IPV4•线路1
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-01咪咕
-http://t.061899.xyz/tl/tl.php$IPV4•线路2
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-02咪咕
-http://j.s.bkpcp.top/jj/cctv2$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-03咪咕
-http://j.s.bkpcp.top/jj/cctv3$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-04咪咕
-http://j.s.bkpcp.top/jj/cctv4$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-05咪咕
-http://j.s.bkpcp.top/jj/cctv5$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-06咪咕
-http://j.s.bkpcp.top/jj/cctv6$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-07咪咕
-http://j.s.bkpcp.top/jj/cctv7$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-08咪咕
-http://j.s.bkpcp.top/jj/cctv8$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-09咪咕
-http://j.s.bkpcp.top/jj/cctv9$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-10咪咕
-http://j.s.bkpcp.top/jj/cctv10$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-11咪咕
-http://j.s.bkpcp.top/jj/cctv11$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-12咪咕
-http://j.s.bkpcp.top/jj/cctv12$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-13咪咕
-http://j.s.bkpcp.top/jj/cctv13$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-14咪咕
-http://j.s.bkpcp.top/jj/cctv14$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-15咪咕
-http://j.s.bkpcp.top/jj/cctv15$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-16咪咕
-http://j.s.bkpcp.top/jj/cctv16$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-17咪咕
-http://j.s.bkpcp.top/jj/cctv17$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV4欧洲咪咕
-http://go.bkpcp.top/mg/cctv4o$IPV4•线路1
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV4欧洲咪咕
-http://j.s.bkpcp.top/jj/cctv4o$IPV4•线路2
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV4美洲咪咕
-http://go.bkpcp.top/mg/cctv4m$IPV4•线路1
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV4美洲咪咕
-http://j.s.bkpcp.top/jj/cctv4m$IPV4•线路2
-#EXTINF:-1 group-title="🍉┃咪咕频道",CCTV-5+咪咕
-http://j.s.bkpcp.top/jj/cctv5p$IPV4
 #EXTINF:-1 group-title="🍉┃咪咕频道",CGT西语咪咕
-http://go.bkpcp.top/mg/cgtne$IPV4•线路1
-#EXTINF:-1 group-title="🍉┃咪咕频道",CGT西语咪咕
-http://j.s.bkpcp.top/jj/cgtne$IPV4•线路2
+https://0472.org/hls/cgtnx.m3u8$IPV4
 #EXTINF:-1 group-title="🍉┃咪咕频道",CGT阿语咪咕
-http://go.bkpcp.top/mg/cgtna$IPV4•线路1
-#EXTINF:-1 group-title="🍉┃咪咕频道",CGT阿语咪咕
-http://j.s.bkpcp.top/jj/cgtna$IPV4•线路2
+https://0472.org/hls/cgtna.m3u8$IPV4
 #EXTINF:-1 group-title="🍉┃咪咕频道",CGT法语咪咕
-http://go.bkpcp.top/mg/cgtnf$IPV4•线路1
+http://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🍉┃咪咕频道",CGT法语咪咕
-http://j.s.bkpcp.top/jj/cgtnf$IPV4•线路2
+https://0472.org/hls/cgtnf.m3u8$IPV4•线路2
 #EXTINF:-1 group-title="🍉┃咪咕频道",家庭影院咪咕
 http://124.93.18.238:9002//hls/78/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🍉┃咪咕频道",家庭影院咪咕
@@ -1143,20 +1101,16 @@ http://38.75.136.137:98/gslb/dsdqpub/chcjt.m3u8$IPV4•线路4
 http://61.184.46.85:9901/tsfile/live/1023_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🍉┃咪咕频道",动作电影咪咕
 http://live.metshop.top/huya/11602077$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",东方卫视咪咕
-http://j.s.bkpcp.top/jj/dfws$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",江苏卫视咪咕
-http://j.s.bkpcp.top/jj/jsws$IPV4
 #EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
 http://go.bkpcp.top/mg/sxws$IPV4•线路1
 #EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
-http://j.s.bkpcp.top/jj/sxws$IPV4•线路2
-#EXTINF:-1 group-title="🍉┃咪咕频道",湖北卫视咪咕
-http://j.s.bkpcp.top/jj/hubws$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",江西卫视咪咕
-http://j.s.bkpcp.top/jj/jxws$IPV4
-#EXTINF:-1 group-title="🍉┃咪咕频道",海南卫视咪咕
-http://j.s.bkpcp.top/jj/hinws$IPV4
+http://23.237.228.134/live6/sichuan.m3u8$IPV4•线路2
+#EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
+http://120.238.94.10:9901/tsfile/live/1070_1.m3u8$IPV4•线路3
+#EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
+http://hlsbkmgsplive.miguvideo.com/migu/kailu/shan3xiws/57/20220809/index.m3u8$IPV4•线路4
+#EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
+http://112.27.235.94:8000/hls/43/index.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🐟┃少儿频道",卡酷少儿
 https://zby.130519.xyz/PLTV/11/224/3221226019/index.m3u8$IPV4
 #EXTINF:-1 group-title="🐟┃少儿频道",动漫秀场
