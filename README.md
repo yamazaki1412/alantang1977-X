@@ -48,9 +48,9 @@ UC盘: https://drive.uc.cn/s/e7b5fd4698704
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 
-## 🚁解密链接：https://www.xn--sss604efuw.com/jm/  
+## 🚁解密链接：https://www.xn--sss604efuw.com/jm/
 
-https://tools.v1.mk/
+https://tools.v1.mk
 
 http://www.饭太硬.com/tv
 
