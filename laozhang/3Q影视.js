@@ -124,12 +124,14 @@ async function detail(id) {
         if (is_show === 1) {
             let urls = [];
             let items = urls_str.split('#');
-            for (const item of items) {
+            for (let j = 0; j < items.length; j++) {
+                const item = items[j];
                 if (item.includes('$')) {
                     let parts = item.split('$');
                     let episode = parts[0];
                     let m_url = parts[1];
-                    urls.push(`${episode}$${show_code}@${need_parse}@${m_url}`);
+                    // 新格式：包含 vod_id 和剧集索引，用于播放时构造解析链接
+                    urls.push(`${episode}$${show_code}@${need_parse}@${data.vod_id}@${j}@${m_url}`);
                 }
             }
             if (urls.length > 0) {
@@ -159,35 +161,63 @@ async function detail(id) {
 
 async function play(flag, id, flags) {
     let parts = id.split('@');
-    let play_from = parts[0];
-    let need_parse = parts[1];
-    let raw_url = parts[2];
-    let jx = 0;
-    let final_url = '';
-    if (need_parse === '1') {
-        let auth_token = '';
-        for (let i = 0; i < 2; i++) {
-            try {
-                let apiUrl = `${host}/api.php/decode/url/?url=${encodeURIComponent(raw_url)}&vodFrom=${play_from}${auth_token}`;
-                let resp = await req(apiUrl, { headers: headers, timeout: 30000 });
-                let json = JSON.parse(resp.content);
-                if (json.code === 2 && json.challenge) {
-                    let token = eval(json.challenge);
-                    auth_token = `&token=${token}`;
-                    continue;
-                }
-                let play_url = json.data;
-                if (play_url && play_url.startsWith('http')) {
-                    final_url = play_url;
-                    break;
-                }
-            } catch (e) {
-                console.error(e);
-            }
-        }
+    let play_from, need_parse, raw_url, vod_id, index;
+
+    // 判断是新格式（至少5段）还是旧格式
+    if (parts.length >= 5) {
+        // 新格式： play_from@need_parse@vod_id@index@raw_url
+        play_from = parts[0];
+        need_parse = parts[1];
+        vod_id = parts[2];
+        index = parts[3];
+        raw_url = parts.slice(4).join('@');
+    } else {
+        // 旧格式兼容
+        play_from = parts[0];
+        need_parse = parts[1];
+        raw_url = parts[2];
+        vod_id = null;
+        index = null;
     }
 
-    if (!final_url) {
+    let jx = 0;
+    let final_url = '';
+
+    if (need_parse === '1') {
+        if (vod_id) {
+            // 新格式：返回站内播放页链接，由外部解析器处理
+            final_url = `${host}/play/${vod_id}#sid=${play_from}&nid=${index}`;
+            jx = 1;
+        } else {
+            // 旧格式：尝试原有解码接口（可能已失效，保留作为降级）
+            let auth_token = '';
+            for (let i = 0; i < 2; i++) {
+                try {
+                    let apiUrl = `${host}/api.php/decode/url/?url=${encodeURIComponent(raw_url)}&vodFrom=${play_from}${auth_token}`;
+                    let resp = await req(apiUrl, { headers: headers, timeout: 30000 });
+                    let json = JSON.parse(resp.content);
+                    if (json.code === 2 && json.challenge) {
+                        let token = eval(json.challenge);
+                        auth_token = `&token=${token}`;
+                        continue;
+                    }
+                    let play_url = json.data;
+                    if (play_url && play_url.startsWith('http')) {
+                        final_url = play_url;
+                        break;
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+            if (!final_url) {
+                final_url = raw_url;
+                if (/(?:www\.iqiyi|v\.qq|v\.youku|www\.mgtv|www\.bilibili)\.com/.test(raw_url)) {
+                    jx = 1;
+                }
+            }
+        }
+    } else {
         final_url = raw_url;
         if (/(?:www\.iqiyi|v\.qq|v\.youku|www\.mgtv|www\.bilibili)\.com/.test(raw_url)) {
             jx = 1;
