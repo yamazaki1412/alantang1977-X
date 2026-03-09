@@ -6,7 +6,7 @@
 ##常用系列
 {"key": "玩偶","name": "🤹‍♂️┃玩偶哥哥┃饭硬","type": 3,"api": "csp_WoGGGuard","timeout": 30,"searchable": 1,"quickSearch": 1,"changeable": 0,"ext": {"Cloud-drive": "tvfan/Cloud-drive.txt"}},
 {"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
-{"name":"🥔┃瓜子┃秒播","key":"Guazi","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/guazi.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
+{"name":"🥔┃瓜子┃秒播","key":"Guazi","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/guazi.json","jar":"./jar/嗷嗚.png;md5;29ee0730017660db62f57a585cd1aeb6"},
 
 ##老张观影
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
@@ -36,11 +36,11 @@
 {"key":"爱看","name":"🤖┃机器人┃爱看","type":3,"api":"https://gh-proxy.org/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/py/爱看机器人[虫].js"},
 	
 {"key": "剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
-{"key":"瓜子","name":"🍉┃瓜子┃影视","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cloud.7so.top/f/1r61hq/guazi.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
-{"name":"☕┃韩剧┃秒播","key":"Hxq","type":3,"api":"csp_HxqAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
-{"name":"🎸┃酷狗┃音乐","key":"KuGou","type":3,"api":"csp_KuGouAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":0,"jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
-//{"name":"😄┃二小┃4K","key":"exWobg","type":3,"api":"csp_WobgAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":{"sites":"http://erxiaofn.click,http://2xiaopan.fun,http://erxiaofn.site,https://www.erixaopan.fun,https://wexwp.cc,https://xhww.net","filters":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/woex.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"}},
-//{"name":"😆┃虎斑┃|4K","key":"hbWobg","type":3,"api":"csp_WobgAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":{"sites":"http://103.45.162.207:20720","filters":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/wohb.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"}},	
+{"key":"瓜子","name":"🍉┃瓜子┃影视","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cloud.7so.top/f/1r61hq/guazi.json","jar":"./jar/嗷嗚.png;md5;29ee0730017660db62f57a585cd1aeb6"},
+{"name":"☕┃韩剧┃秒播","key":"Hxq","type":3,"api":"csp_HxqAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"./jar/嗷嗚.png;md5;29ee0730017660db62f57a585cd1aeb6"},
+{"name":"🎸┃酷狗┃音乐","key":"KuGou","type":3,"api":"csp_KuGouAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":0,"jar":"./jar/嗷嗚.png;md5;29ee0730017660db62f57a585cd1aeb6"},
+//{"name":"😄┃二小┃4K","key":"exWobg","type":3,"api":"csp_WobgAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":{"sites":"http://erxiaofn.click,http://2xiaopan.fun,http://erxiaofn.site,https://www.erixaopan.fun,https://wexwp.cc,https://xhww.net","filters":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/woex.json","jar":"./jar/嗷嗚.png;md5;29ee0730017660db62f57a585cd1aeb6"}},
+//{"name":"😆┃虎斑┃|4K","key":"hbWobg","type":3,"api":"csp_WobgAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":{"sites":"http://103.45.162.207:20720","filters":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/wohb.json","jar":"./jar/嗷嗚.png;md5;29ee0730017660db62f57a585cd1aeb6"}},	
 
 	
 {"key": "飞快","name": "🥊┃飞快┃TV","type": 3,"api": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/py/飞快_pan.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
@@ -555,6 +555,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
