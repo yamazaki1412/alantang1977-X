@@ -1,27 +1,65 @@
-let host = 'https://www.qqqys.com';
+let HOSTS = [
+    'https://www.qqqys.com',
+    'https://qqqys.com'
+]
+
+let host = HOSTS[0]
 
 let headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
     'Referer': host,
     'Origin': host,
-    'accept-language': 'zh-CN,zh;q=0.9'
-};
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'zh-CN,zh;q=0.9'
+}
 
-async function init(cfg) {}
+async function init(cfg) {
+}
 
+/* 自动请求（带域名容错） */
+async function request(path) {
+
+    for (let h of HOSTS) {
+
+        try {
+
+            let url = h + path
+
+            let resp = await req(url, {
+                headers: {
+                    ...headers,
+                    Referer: h,
+                    Origin: h
+                },
+                timeout: 10000
+            })
+
+            if (resp && resp.content) {
+
+                host = h
+                return resp.content
+
+            }
+
+        } catch (e) {
+        }
+    }
+
+    return '{}'
+}
+
+/* 转换视频数据 */
 function json2vods(arr) {
 
-    let videos = [];
+    let videos = []
 
-    if (!arr) return videos;
+    if (!arr) return videos
 
     for (const i of arr) {
 
-        let type_name = i.type_name || '';
+        let type_name = i.type_name || ''
 
-        if (i.vod_class) {
-            type_name += ',' + i.vod_class;
-        }
+        if (i.vod_class) type_name += ',' + i.vod_class
 
         videos.push({
             vod_id: String(i.vod_id),
@@ -30,120 +68,122 @@ function json2vods(arr) {
             vod_remarks: i.vod_remarks,
             vod_year: i.vod_year,
             type_name: type_name
-        });
+        })
     }
 
-    return videos;
+    return videos
 }
 
+/* 首页 */
 async function home(filter) {
 
-    let url = host + '/api.php/index/home';
+    let content = await request('/api.php/index/home')
 
-    let resp = await req(url, { headers: headers });
+    let json = JSON.parse(content || '{}')
 
-    let json = JSON.parse(resp.content || '{}');
+    let categories = json?.data?.categories || []
 
-    let categories = json?.data?.categories || [];
-
-    let classes = [];
-    let videos = [];
+    let classes = []
+    let videos = []
 
     for (const i of categories) {
 
         classes.push({
             type_id: i.type_name,
             type_name: i.type_name
-        });
+        })
 
-        videos.push(...json2vods(i.videos));
+        videos.push(...json2vods(i.videos))
     }
 
     return JSON.stringify({
         class: classes,
         list: videos,
         filters: {}
-    });
+    })
 }
 
+/* 首页推荐 */
 async function homeVod() {
-    return JSON.stringify({ list: [] });
+    return JSON.stringify({ list: [] })
 }
 
+/* 分类 */
 async function category(tid, pg, filter, extend) {
 
-    let url = `${host}/api.php/filter/vod?type_name=${encodeURIComponent(tid)}&page=${pg}&sort=hits`;
+    let path = `/api.php/filter/vod?type_name=${encodeURIComponent(tid)}&page=${pg}&sort=hits`
 
-    let resp = await req(url, { headers: headers });
+    let content = await request(path)
 
-    let json = JSON.parse(resp.content || '{}');
+    let json = JSON.parse(content || '{}')
 
     return JSON.stringify({
         list: json2vods(json?.data),
         page: parseInt(pg),
         pagecount: json?.pageCount || 1
-    });
+    })
 }
 
+/* 搜索 */
 async function search(wd, quick, pg) {
 
-    let url = `${host}/api.php/search/index?wd=${encodeURIComponent(wd)}&page=${pg}&limit=15`;
+    let path = `/api.php/search/index?wd=${encodeURIComponent(wd)}&page=${pg}&limit=15`
 
-    let resp = await req(url, { headers: headers });
+    let content = await request(path)
 
-    let json = JSON.parse(resp.content || '{}');
+    let json = JSON.parse(content || '{}')
 
     return JSON.stringify({
         list: json2vods(json?.data),
         page: parseInt(pg),
         pagecount: json?.pageCount || 1
-    });
+    })
 }
 
+/* 详情 */
 async function detail(id) {
 
-    let url = `${host}/api.php/vod/get_detail?vod_id=${id}`;
+    let content = await request(`/api.php/vod/get_detail?vod_id=${id}`)
 
-    let resp = await req(url, { headers: headers });
+    let json = JSON.parse(content || '{}')
 
-    let json = JSON.parse(resp.content || '{}');
+    let data = json?.data?.[0] || {}
 
-    let data = json?.data?.[0] || {};
+    let shows = []
+    let play_urls = []
 
-    let shows = [];
-    let play_urls = [];
+    let raw_shows = (data.vod_play_from || '').split('$$$')
 
-    let raw_shows = (data.vod_play_from || '').split('$$$');
-    let raw_urls = (data.vod_play_url || '').split('$$$');
+    let raw_urls = (data.vod_play_url || '').split('$$$')
 
     for (let i = 0; i < raw_shows.length; i++) {
 
-        let show = raw_shows[i];
+        let show = raw_shows[i]
 
-        let urls = raw_urls[i] || '';
+        let urls = raw_urls[i] || ''
 
-        let items = urls.split('#');
+        let items = urls.split('#')
 
-        let eps = [];
+        let eps = []
 
         for (let j = 0; j < items.length; j++) {
 
-            let item = items[j];
+            let item = items[j]
 
-            if (!item.includes('$')) continue;
+            if (!item.includes('$')) continue
 
-            let parts = item.split('$');
+            let parts = item.split('$')
 
-            let ep = parts[0];
+            let ep = parts[0]
 
-            eps.push(`${ep}$${data.vod_id}@${j}`);
+            eps.push(`${ep}$${data.vod_id}@${j}`)
         }
 
         if (eps.length > 0) {
 
-            shows.push(show);
+            shows.push(show)
 
-            play_urls.push(eps.join('#'));
+            play_urls.push(eps.join('#'))
         }
     }
 
@@ -172,29 +212,51 @@ async function detail(id) {
         vod_play_url: play_urls.join('$$$'),
 
         type_name: data.vod_class
-    };
+    }
 
-    return JSON.stringify({ list: [video] });
+    return JSON.stringify({ list: [video] })
 }
 
+/* 播放解析 */
 async function play(flag, id, flags) {
 
-    let parts = id.split('@');
+    let parts = id.split('@')
 
-    let vod_id = parts[0];
+    let vod_id = parts[0]
 
-    let index = parts[1] || 0;
+    let index = parts[1] || 0
 
-    let playUrl = `${host}/play/${vod_id}#nid=${index}`;
+    let playPage = `${host}/play/${vod_id}#nid=${index}`
 
     return JSON.stringify({
         parse: 1,
-        url: playUrl,
+        url: playPage,
         header: {
             'User-Agent': headers['User-Agent'],
             'Referer': host
         }
-    });
+    })
+}
+
+/* 动作接口 */
+async function action(actionStr) {
+
+    try {
+
+        let params = JSON.parse(actionStr)
+
+        if (params.action === 'test') {
+
+            return {
+                msg: 'Spider OK',
+                host: host
+            }
+        }
+
+    } catch (e) {
+    }
+
+    return { list: [] }
 }
 
 export function __jsEvalReturn() {
@@ -213,6 +275,8 @@ export function __jsEvalReturn() {
 
         detail: detail,
 
-        play: play
-    };
+        play: play,
+
+        action: action
+    }
 }
