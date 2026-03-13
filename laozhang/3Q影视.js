@@ -1,117 +1,227 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
+let host = 'https://www.qqqys.com';
 
-// 修复点1：更新请求头中的Referer为正确域名
-const requestHeaders = {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
-  'Referer': 'https://qqqys.com/', // 修正为正确域名
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-  'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-  'Cache-Control': 'no-cache',
-  'Connection': 'keep-alive'
+let headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36',
+    'accept-language': 'zh-CN,zh;q=0.9',
+    'cache-control': 'no-cache',
+    'pragma': 'no-cache',
+    'priority': 'u=1, i',
+    'Referer': host,
+    'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+    'sec-ch-ua-mobile': "?0",
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': "empty",
+    'sec-fetch-mode': "cors",
+    'sec-fetch-site': "same-origin"
 };
 
-// 核心功能：获取3Q影视指定分类的影视列表（适配正确域名）
-async function get3QMovieList(category = 'movie', page = 1) {
-  try {
-    // 修复点2：目标URL替换为正确域名
-    const targetUrl = `https://qqqys.com/${category}/list-${page}.html`;
-    
-    const response = await axios.get(targetUrl, {
-      headers: requestHeaders,
-      timeout: 10000,
-      maxRedirects: 5,
-      // 若网站需要Cookie验证，在此补充（示例：）
-      // headers: { ...requestHeaders, 'Cookie': 'xxx=xxx; yyy=yyy' }
-    });
+async function init(cfg) {}
 
-    if (response.status !== 200) {
-      throw new Error(`请求失败，状态码：${response.status}`);
-    }
-
-    const html = response.data;
-    const $ = cheerio.load(html);
-    const movieList = [];
-
-    // 【关键】需根据 https://qqqys.com 真实DOM结构调整选择器
-    // 示例选择器（请替换为网站真实的影视列表容器选择器）
-    $('.movie-item').each((index, element) => {
-      const title = $(element).find('.title a').text().trim();
-      const cover = $(element).find('.cover img').attr('src') || '';
-      const link = $(element).find('.title a').attr('href') || '';
-      const score = $(element).find('.score').text().trim() || '暂无评分';
-      
-      if (title) {
-        movieList.push({
-          title,
-          // 修复点3：补全封面相对路径时使用正确域名
-          cover: cover.startsWith('//') ? `https:${cover}` : cover,
-          // 修复点4：拼接详情链接时使用正确域名
-          link: link.startsWith('/') ? `https://qqqys.com${link}` : link,
-          score,
-          category,
-          page
+/**
+ * 辅助函数：将API返回的视频列表转为标准vod格式
+ */
+function json2vods(arr) {
+    let videos = [];
+    for (const i of arr || []) {
+        let type_name = i.type_name || '';
+        if (i.vod_class) {
+            type_name = type_name + ',' + i.vod_class;
+        }
+        videos.push({
+            'vod_id': i.vod_id.toString(),
+            'vod_name': i.vod_name,
+            'vod_pic': i.vod_pic,
+            'vod_remarks': i.vod_remarks,
+            'type_name': type_name,
+            'vod_year': i.vod_year
         });
-      }
-    });
-
-    if (movieList.length === 0) {
-      console.warn(`第${page}页未获取到${category}类影视数据，请检查：
-      1. 目标网站${targetUrl}是否可正常访问；
-      2. 影视列表的DOM选择器（如.movie-item）是否匹配网站真实结构；
-      3. 网站是否有反爬机制（如IP封禁、验证码）。`);
     }
-
-    return movieList;
-  } catch (error) {
-    console.error(`获取影视列表失败：`, error.message);
-    // 补充反爬/网络问题提示
-    if (error.message.includes('timeout')) {
-      console.error('提示：请求超时，可能是网站屏蔽了当前IP，或网络不稳定');
-    } else if (error.message.includes('403')) {
-      console.error('提示：403禁止访问，网站可能检测到爬虫，需调整请求头/添加Cookie');
-    }
-    return [];
-  }
+    return videos;
 }
 
-// 核心功能：获取单部影视的详情信息（适配正确域名）
-async function get3QMovieDetail(movieLink) {
-  try {
-    const response = await axios.get(movieLink, {
-      headers: requestHeaders,
-      timeout: 10000
-    });
+async function home(filter) {
+    let url = host + '/api.php/index/home';
+    let resp = await req(url, { headers: headers });
+    let json = JSON.parse(resp.content || '{}');
 
-    if (response.status !== 200) {
-      throw new Error(`详情请求失败，状态码：${response.status}`);
+    let categories = json?.data?.categories || [];
+
+    let classes = [];
+    let videos = [];
+
+    for (const i of categories) {
+        classes.push({
+            'type_id': i.type_name,
+            'type_name': i.type_name
+        });
+        videos.push(...json2vods(i.videos));
     }
 
-    const html = response.data;
-    const $ = cheerio.load(html);
-    const movieDetail = {
-      // 【关键】需根据 https://qqqys.com 详情页真实DOM调整选择器
-      title: $('.movie-detail h1').text().trim() || '暂无标题',
-      desc: $('.movie-desc').text().trim() || '暂无简介',
-      actor: $('.actor-list').text().trim() || '暂无演员',
-      playUrl: $('.play-btn a').attr('href') || '暂无播放地址'
+    return JSON.stringify({
+        class: classes,
+        list: videos,
+        filters: {}
+    });
+}
+
+async function homeVod() {
+    return JSON.stringify({ list: [] });
+}
+
+async function category(tid, pg, filter, extend) {
+    let url = `${host}/api.php/filter/vod?type_name=${encodeURIComponent(tid)}&page=${pg}&sort=hits`;
+    let resp = await req(url, { headers: headers });
+    let json = JSON.parse(resp.content || '{}');
+
+    return JSON.stringify({
+        list: json2vods(json?.data),
+        page: parseInt(pg),
+        pagecount: json?.pageCount || 1
+    });
+}
+
+async function search(wd, quick, pg) {
+    let url = `${host}/api.php/search/index?wd=${encodeURIComponent(wd)}&page=${pg}&limit=15`;
+    let resp = await req(url, { headers: headers });
+    let json = JSON.parse(resp.content || '{}');
+
+    return JSON.stringify({
+        list: json2vods(json?.data),
+        page: parseInt(pg),
+        pagecount: json?.pageCount || 1
+    });
+}
+
+async function detail(id) {
+    let url = `${host}/api.php/vod/get_detail?vod_id=${id}`;
+    let resp = await req(url, { headers: headers });
+    let json = JSON.parse(resp.content || '{}');
+
+    let data = json?.data?.[0] || {};
+    let vodplayer = json?.vodplayer || [];
+
+    let shows = [];
+    let play_urls = [];
+
+    let raw_shows = (data.vod_play_from || '').split('$$$');
+    let raw_urls_list = (data.vod_play_url || '').split('$$$');
+
+    for (let i = 0; i < raw_shows.length; i++) {
+        let show_code = raw_shows[i];
+        let urls_str = raw_urls_list[i] || '';
+
+        let need_parse = 0;
+        let is_show = 0;
+        let name = show_code;
+
+        for (const player of vodplayer) {
+            if (player.from === show_code) {
+                is_show = 1;
+                need_parse = player.decode_status;
+                if (show_code.toLowerCase() !== player.show.toLowerCase()) {
+                    name = `${player.show} (${show_code})`;
+                }
+                break;
+            }
+        }
+
+        if (is_show === 1) {
+            let urls = [];
+            let items = urls_str.split('#');
+
+            for (let j = 0; j < items.length; j++) {
+                const item = items[j];
+
+                if (item.includes('$')) {
+                    let parts = item.split('$');
+                    let episode = parts[0];
+                    let m_url = parts[1];
+
+                    urls.push(`${episode}$${show_code}@${need_parse}@${data.vod_id}@${j}@${m_url}`);
+                }
+            }
+
+            if (urls.length > 0) {
+                play_urls.push(urls.join('#'));
+                shows.push(name);
+            }
+        }
+    }
+
+    let video = {
+        'vod_id': (data.vod_id || '').toString(),
+        'vod_name': data.vod_name,
+        'vod_pic': data.vod_pic,
+        'vod_remarks': data.vod_remarks,
+        'vod_year': data.vod_year,
+        'vod_area': data.vod_area,
+        'vod_actor': data.vod_actor,
+        'vod_director': data.vod_director,
+        'vod_content': data.vod_content,
+        'vod_play_from': shows.join('$$$'),
+        'vod_play_url': play_urls.join('$$$'),
+        'type_name': data.vod_class
     };
 
-    return movieDetail;
-  } catch (error) {
-    console.error(`获取影视详情失败：`, error.message);
-    return null;
-  }
+    return JSON.stringify({ list: [video] });
 }
 
-// 测试调用（可根据实际需求调整分类/页码）
-(async () => {
-  console.log('开始请求 https://qqqys.com 数据...');
-  const movieList = await get3QMovieList('movie', 1);
-  console.log('影视列表（共${movieList.length}条）：', movieList);
-  
-  if (movieList.length > 0) {
-    const firstMovieDetail = await get3QMovieDetail(movieList[0].link);
-    console.log('第一部影视详情：', firstMovieDetail);
-  }
-})();
+async function play(flag, id, flags) {
+
+    let parts = id.split('@');
+
+    let play_from, need_parse, raw_url, vod_id, index;
+
+    if (parts.length >= 5) {
+        play_from = parts[0];
+        need_parse = parts[1];
+        vod_id = parts[2];
+        index = parts[3];
+        raw_url = parts.slice(4).join('@');
+    } else {
+        play_from = parts[0];
+        need_parse = parts[1];
+        raw_url = parts[2];
+    }
+
+    let jx = 0;
+    let final_url = '';
+
+    if (need_parse === '1') {
+
+        if (vod_id) {
+            final_url = `${host}/play/${vod_id}#sid=${play_from}&nid=${index}`;
+            jx = 1;
+        } else {
+            final_url = raw_url;
+        }
+
+    } else {
+        final_url = raw_url;
+    }
+
+    if (/(?:www\.iqiyi|v\.qq|v\.youku|www\.mgtv|www\.bilibili)\.com/.test(final_url)) {
+        jx = 1;
+    }
+
+    return JSON.stringify({
+        parse: jx,
+        url: final_url,
+        header: {
+            'User-Agent': headers['User-Agent'],
+            'Referer': host
+        }
+    });
+}
+
+export function __jsEvalReturn() {
+    return {
+        init: init,
+        home: home,
+        homeVod: homeVod,
+        category: category,
+        search: search,
+        detail: detail,
+        play: play
+    };
+}
