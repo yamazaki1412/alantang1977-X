@@ -11,7 +11,7 @@
 {"name":"☕┃韩剧影视|秒播","key":"Hxq","type":3,"api":"csp_HxqAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png"},
 
 ##老张观影
-{"key": "3Q影视[盘]","name": "👮┃3QQ影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},	
+{"key": "3Q影视[盘]","name": "👮┃3Q影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},	
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "剧海大全","name": "👮┃剧海┃影视","type": 3,"api": "./laozhang/剧海大全.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "1独播库","name": "👮┃独播┃老张","type": 3,"api": "./laozhang/独播库.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
@@ -561,6 +561,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
