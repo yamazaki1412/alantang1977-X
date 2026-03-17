@@ -10,7 +10,7 @@
 {"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"./jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
 {"name":"☕┃韩剧影视┃秒播","key":"Hxq","type":3,"api":"csp_HxqAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png"},
 
-{"key": "Music24bit","name": "☕┃流行音乐┃无损","type": 3,"api": "csp_Music24bit","searchable": 1,"changeable": 1,"jar":"https://tc-new.z.wiki/autoupload/iYHTWVx6T8RrCmqdGD6MOdiO_OyvX7mIgxFBfDMDErs/20260317/QOA4/fish03170106.php;md5;30687668c3a53f274232a5aef02c4ced","ext": {"categories": ["Cyberlume","周杰伦","汪苏泷","陈奕迅","张学友","薛之谦","林俊杰"]}},
+{"key": "Music24bit","name": "☕┃流行音乐┃无损","type": 3,"api": "csp_Music24bit","searchable": 1,"changeable": 1,"jar":"https://tc-new.z.wiki/autoupload/iYHTWVx6T8RrCmqdGD6MOdiO_OyvX7mIgxFBfDMDErs/20260317/QOA4/fish03170106.php;md5;30687668c3a53f274232a5aef02c4ced","ext": {"categories": ["Cyberlume","周杰伦","汪苏泷","陈奕迅","张学友","薛之谦","林俊杰","李荣浩","王菲","邓紫棋","孙燕姿","刘德华","莫文蔚","陶喆","SHE","林忆莲","孙露","Taylor Swift","那英","i-dle","汪峰"]}},
 
 {"key": "fishhxq","name": "🎭┃韩小圈圈┃摸鱼","type": 3,"api": "csp_FishHxq","ext": "https://fishapi.wya6.com/fish/fishhxq.php","jar":"./jar/摸鱼.php"},
 {"key": "Symx","name": "🎉┃山有木兮┃摸鱼","type": 3,"api": "csp_Symx","ext": "https://film.symx.club","jar":"./jar/摸鱼.php"},
