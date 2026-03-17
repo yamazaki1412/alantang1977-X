@@ -10,6 +10,15 @@
 {"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"./jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
 {"name":"☕┃韩剧影视┃秒播","key":"Hxq","type":3,"api":"csp_HxqAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png"},
 
+{"key": "Music24bit","name": "☕┃流行音乐┃无损","type": 3,"api": "csp_Music24bit","searchable": 1,"changeable": 1,"jar":"./jar/摸鱼.png","ext": {"categories": ["Cyberlume","周杰伦","林俊杰","陈奕迅","邓紫棋","薛之谦"]}},
+{"key": "fishhxq","name": "🎭┃韩小圈圈┃摸鱼","type": 3,"api": "csp_FishHxq","ext": "https://fishapi.wya6.com/fish/fishhxq.php","jar":"./jar/摸鱼.png"},
+{"key": "Symx","name": "🎉┃山有木兮┃摸鱼","type": 3,"api": "csp_Symx","ext": "https://film.symx.club","jar":"./jar/摸鱼.png"},
+{"key": "RenRen","name": "⛵┃人人影视┃摸鱼","type": 3,"api": "csp_RenRen","searchable": 1,"quickSearch": 1,"filterable": 0,"jar":"./jar/摸鱼.png"},
+{"key": "guazi","name": "🥔┃瓜子影视┃秒播","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar":"./jar/dongli-spider.jar","ext": {}},	
+{"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"./jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
+{"key": "MqTv","name": "☎️┃麻雀视频┃摸鱼","type": 3,"api": "csp_MqTv","searchable": 1,"ext": "https://www.mqtv.cc","jar":"./jar/摸鱼.png"},
+{"key": "YGP","name": "📚┃新片预告┃摸鱼","type": 3,"api": "csp_YGP","searchable": 1,"quickSearch": 1,"filterable": 1,"jar":"./jar/摸鱼.png"},
+	
 ##老张观影
 {"key": "3Q影视[盘]","name": "👮┃3Q影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},	
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
