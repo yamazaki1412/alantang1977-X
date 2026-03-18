@@ -113,7 +113,7 @@
 {"key": "MDrive","name": "🗂┃饭硬云盘┃配置","type": 3,"api": "csp_MyDriveGuard","changeable": 0,"indexs": 0,"searchable": 1,"style": {"type": "oval"},"ext": {"Cloud-drive": "tvfan/Cloud-drive.txt"}},	
 //{"key": "网盘","name": "🐧┃PG网盘┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d","style": {"type": "rect","ratio": 1.5}},
 {"key": "人人","name": "💗┃人人┃网盘","type": 3,"api": "csp_RenRen","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0,"jar":"https://gh-proxy.org/https://raw.githubusercontent.com/chitue/dongliTV/refs/heads/main/jar/dongli-spider.jar;md5;bef649c9ff45c1b74f1701032a79bf1b"},
-{"key": "商店","name": "🏬┃商店┃更新","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"style": {"type": "oval","ratio": 1.1},"ext": "https://dongli.s3.bitiful.net/dp/config/market.json","jar":"https://gh-proxy.org/https://raw.githubusercontent.com/chitue/dongliTV/refs/heads/main/jar/dongli-spider.jar;md5;bef649c9ff45c1b74f1701032a79bf1b"},
+{"key": "商店","name": "🏬┃商店┃更新","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"style": {"type": "oval","ratio": 1.1},"ext": "./market/market.json","jar":"https://gh-proxy.org/https://raw.githubusercontent.com/chitue/dongliTV/refs/heads/main/jar/dongli-spider.jar;md5;bef649c9ff45c1b74f1701032a79bf1b"},
 //{"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d"},
 	
 ##PY源系列
