@@ -284,7 +284,7 @@
 {"name": "🎭┃电视家「直播」","url": "https://down.nigx.cn/dsj.zzong6599.workers.dev","header": {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36","Referer": "","cookie": ""},"epg": "https://iptv.crestekk.cn/epgphp/index.php"},
 {"name": "🪅┃kakaxi「直播」","url": "https://kakaxi.indevs.in/ipv4.txt"},
 {"name": "🐰┃kakaxi「直播ipv6」","type":0,"url":"https://kakaxi.indevs.in/ipv6.m3u","playerType":1},
-{"name": "📚┃jun自建「直播tv」","type":0,"url":"http://192.168.1.15:3000","playerType":1},
+//{"name": "📚┃jun自建「直播tv」","type":0,"url":"http://192.168.1.15:3000","playerType":1},
 {"name": "🍞️┃tangstudio「直播tv」","type": 0,"url": "https://tangstudio.dpdns.org/m3u/juntv.m3u","playerType":1},
 {"name": "🍞️┃tangstudio「直播judygotv」","type": 0,"url": "https://tangstudio.dpdns.org/m3u/jjtv.m3u","playerType":1},
 	
