@@ -72,6 +72,7 @@ http://mpanso.me/小米/DEMO.json
 
 ## 真实地址生成器 https://ip-geoaddress-generator.pages.dev/
                  https://realaddress.remit.ee/?country=US
+                 https://ratenn.com
 
 ## 测试真实网速 https://www.itdog.cn/tcping/
 
