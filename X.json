@@ -17,7 +17,7 @@
 {"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"./jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
 {"key": "MqTv","name": "☎️┃麻雀视频┃摸鱼","type": 3,"api": "csp_MqTv","searchable": 1,"ext": "https://www.mqtv.cc","jar":"./jar/摸鱼.php"},
 
-{"key": "新韩剧网","name": "🐇┃新韩剧网┃不夜","type": 3,"api": "./js/新韩剧网.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/不夜.jar"},
+{"key": "bubu影视不夜版","name": "🐇┃bubu影视不夜版┃不夜","type": 3,"api": "./js/bubu影视不夜版.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/不夜.jar"},
 	
 	
 ##老张观影
