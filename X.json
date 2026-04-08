@@ -16,29 +16,9 @@
 {"key": "guazi","name": "🥔┃瓜子影视┃秒播","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar":"./jar/dongli-spider.jar","ext": {}},	
 {"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"./jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
 {"key": "MqTv","name": "☎️┃麻雀视频┃摸鱼","type": 3,"api": "csp_MqTv","searchable": 1,"ext": "https://www.mqtv.cc","jar":"./jar/摸鱼.php"},
-
-{
-            "key": "油管jar",
-            "name": "油管",
-            "type": 3,
-    "jar": "./jar/老张.jar",
-            "api": "csp_ProxySpider",
-            "searchable": 1,
-            "quickSearch": 1,
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "ext": {
-                "class": "YoutubeSpider",
-                "ext": {
-                    "proxy": "http://127.0.0.1:10172"
-                }
-            },
-            "filterable": 1
-        },
 	
 ##老张观影
+{"key": "油管jar","name": "👮┃油管影视┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","searchable": 1,"quickSearch": 1,"style": {"type": "rect","ratio": 1.33},"ext": {"class": "YoutubeSpider","ext": {"proxy": "http://127.0.0.1:10172"}},"filterable": 1},
 {"key": "3Q影视[盘]","name": "👮┃3Q影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "剧海大全","name": "👮┃剧海┃影视","type": 3,"api": "./laozhang/剧海大全.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
