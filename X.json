@@ -39,26 +39,7 @@
             },
             "filterable": 1
         },
-//{"key": "油管jar","name": "👮┃油管影视┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","searchable": 1,"quickSearch": 1,"style": {"type": "rect","ratio": 1.33},"ext": {"class": "YoutubeSpider","ext": {"proxy": [
-{"name": "油管代理","hosts": [
-                "serv00.com",
-                "serv00.net",
-                "googlevideo.com",
-                "youtube.com",
-                "youtu.be",
-                "yt.be",
-                "googlevideo.com",
-                "googleapis.com",
-                "youtube-nocookie.com",
-                "youtube.googleapis.com",
-                "youtubei.googleapis.com",
-                "nhacmp3youtube.com",
-                "ytimg.com",
-                "google.com",
-                "googleapis.com",
-                "gstatic.com",
-                "ggpht.com",
-                "1e100.net"],"urls": ["http://127.0.0.1:10172"]}]}},"filterable": 1},
+
 {"key": "3Q影视[盘]","name": "👮┃3Q影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "剧海大全","name": "👮┃剧海┃影视","type": 3,"api": "./laozhang/剧海大全.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
