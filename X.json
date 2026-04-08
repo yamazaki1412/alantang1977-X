@@ -19,6 +19,20 @@
 	
 ##老张观影
 {
+            "key": "legado_novel",
+            "name": "📚 整合小说源",
+            "type": 3,"jar": "./jar/laozhang.jar",
+            "api": "csp_ProxySpider",
+            "ext": {
+                "class": "LegadoSpider",
+                "ext": "./json/sources.json"
+            },
+            "style": {
+                "type": "rect",
+                "ratio": 1.33
+            }
+        },
+	{
             "key": "哔哩lz",
             "name": "哔哩lz",
             "type": 3,"jar": "./jar/laozhang.jar",
