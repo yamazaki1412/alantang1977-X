@@ -42,10 +42,7 @@
                 "1e100.net"
             ],
             "urls": [
-                "http://127.0.0.1:10172"
-            ]
-        }
-    ],}},"filterable": 1},
+                "http://127.0.0.1:10172"]}]}},"filterable": 1},
 {"key": "3Q影视[盘]","name": "👮┃3Q影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "剧海大全","name": "👮┃剧海┃影视","type": 3,"api": "./laozhang/剧海大全.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
