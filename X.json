@@ -21,12 +21,12 @@
 
 	
 ##老张观影
-//{"key": "legado_novel","name": "📚┃整合小说源┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","ext": {"class": "LegadoSpider","ext": "./json/sources.json"},"style": {"type": "rect","ratio": 1.33}},
-//{"key": "legado","name": "📚┃完本小说┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","ext": {"class": "LegadoSpider","ext": "./json/sources1.json"},"style": {"type": "rect","ratio": 1.33}},
+{"key": "legado_novel","name": "📚┃整合小说源┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","ext": {"class": "LegadoSpider","ext": "./json/sources.json"},"style": {"type": "rect","ratio": 1.33}},
+{"key": "legado","name": "📚┃完本小说┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","ext": {"class": "LegadoSpider","ext": "./json/sources1.json"},"style": {"type": "rect","ratio": 1.33}},
 {"key": "哔哩lz","name": "👮┃哔哩lz┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","style": {"type": "rect","ratio": 1.33},"changeable": 1,"ext": {"class": "Bilibili"}},
-//{"key": "油管jar2","name": "👮┃油管jar[梯]┃老张","type": 3,"api": "csp_ProxySpider","searchable": 1,"quickSearch": 1,"filterable": 1,"style": {"type": "rect","ratio": 1.33},"ext": "YoutubeSpider$$$新闻直播#PL谍战剧#PD短剧#萌宝短剧#经典音乐#PL动作片#PL科幻片#PD沙雕穿越#中国动漫#PL宝宝巴士#PL动物#PL风光#放松#PL海洋#太空#穿越短剧#PLFashion Lingerie Show#PD VEVO#PL小说","jar": "./jar/laozhang.jar"},
-//{"key": "油管webjar","name": "👮┃油管webjar[梯]┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","searchable": 1,"quickSearch": 1,"style": {"type": "rect","ratio": 1.33},"ext": "YoutubeSpider1$$$PL动作片#PL科幻片#PD沙雕穿越#中国动漫#PL小说#PL宝宝巴士#新闻直播#PL动物#PL风光#放松#PD短剧#PL战争剧#萌宝短剧#经典音乐#PL海洋#太空#穿越短剧","filterable": 1},
-//{"key": "爱瓜实验","name": "👮┃爱瓜实验┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","searchable": 1,"quickSearch": 0,"ext": "AiguaTV","filterable": 1},
+{"key": "油管jar2","name": "👮┃油管jar[梯]┃老张","type": 3,"api": "csp_ProxySpider","searchable": 1,"quickSearch": 1,"filterable": 1,"style": {"type": "rect","ratio": 1.33},"ext": "YoutubeSpider$$$新闻直播#PL谍战剧#PD短剧#萌宝短剧#经典音乐#PL动作片#PL科幻片#PD沙雕穿越#中国动漫#PL宝宝巴士#PL动物#PL风光#放松#PL海洋#太空#穿越短剧#PLFashion Lingerie Show#PD VEVO#PL小说","jar": "./jar/laozhang.jar"},
+{"key": "油管webjar","name": "👮┃油管webjar[梯]┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","searchable": 1,"quickSearch": 1,"style": {"type": "rect","ratio": 1.33},"ext": "YoutubeSpider1$$$PL动作片#PL科幻片#PD沙雕穿越#中国动漫#PL小说#PL宝宝巴士#新闻直播#PL动物#PL风光#放松#PD短剧#PL战争剧#萌宝短剧#经典音乐#PL海洋#太空#穿越短剧","filterable": 1},
+{"key": "爱瓜实验","name": "👮┃爱瓜实验┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","searchable": 1,"quickSearch": 0,"ext": "AiguaTV","filterable": 1},
 {"key": "3Q影视[盘]","name": "👮┃3Q影视┃老张","type": 3,"api": "./laozhang/3Q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "4K指南[盘]","name": "👮┃4K指南┃老张","type": 3,"api": "./laozhang/4K指南[盘].js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
 {"key": "剧海大全","name": "👮┃剧海┃影视","type": 3,"api": "./laozhang/剧海大全.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/laozhang.jar"},
@@ -65,23 +65,6 @@
 {"key": "采集合集py","name": "⚖️┃py采集┃合集","type": 3,"api": "./py/采集合集.py","searchable": 1,"quickSearch": 1,"filterable": 0,"changeable": 1,"playerType": 2,"ext": "1"},
 {"key": "js集合","name": "☎️┃js采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/js.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "采集集合","name": "🥇┃采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/cj/cjjh.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"ext":"1","changeable": 1},
-
-##wv源收集
-{"key": "wv_注视影视","name": "🥷┃💥注视影视","api": "csp_WvSpider","type": "3","ext": "./json/注视影视.wv.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_热播之家","name": "🥷┃💥热播之家","api": "csp_WvSpider","type": "3","ext": "./vod/热播之家.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_3q","name": "🥷┃💥3Q影视","api": "csp_WvSpider","type": "3","ext": "./vod/3Q影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_ddys","name": "🥷┃💥低端影视","api": "csp_WvSpider","type": "3","ext": "./vod/低端影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_jldj","name": "🥷┃💥锦鲤短剧","api": "csp_WvSpider","type": "3","ext": "./vod/锦鲤短剧.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_xhjw","name": "🥷┃💥新韩剧网","api": "csp_WvSpider","type": "3","ext": "./vod/新韩剧网.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_蛋蛋鱼","name": "🥷┃💥蛋蛋鱼","api": "csp_WvSpider","type": "3","ext": "./vod/蛋蛋鱼.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_茶杯狐","name": "🥷┃💥茶杯狐","api": "csp_WvSpider","type": "3","ext": "./vod/茶杯狐.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_aizju","name": "🥷┃💥爱追剧","api": "csp_WvSpider","type": "3","ext": "./vod/爱追剧.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_555ys","name": "🥷┃💥555影视","api": "csp_WvSpider","type": "3","ext": "./vod/555影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_fktv","name": "🥷┃💥快点播","api": "csp_WvSpider","type": "3","ext": "./vod/快点播.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_xlys","name": "🥷┃💥修罗影视","api": "csp_WvSpider","type": "3","ext": "./vod/修罗影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_嘀嗒影视","name": "🥷┃💥嘀嗒影视","api": "csp_WvSpider","type": "3","ext": "./vod/嘀嗒影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_子子影视","name": "🥷┃💥子子影视","api": "csp_WvSpider","type": "3","ext": "./vod/子子影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_央视频","name": "🥷┃💥央视频","api": "csp_WvSpider","type": "3","ext": "./vod/央视频.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 
 {"key": "fishhxq","name": "🎭┃韩小圈┃摸鱼","type": 3,"api": "csp_FishHxq","ext": "https://fishapi.wya6.com/fish/fishhxq.php","jar":"./jar/摸鱼.php"},
 {"key": "Symx","name": "🎉┃山有木兮┃摸鱼","type": 3,"api": "csp_Symx","ext": "https://film.symx.club","jar":"./jar/摸鱼.php"},
