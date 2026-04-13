@@ -17,9 +17,6 @@
 {"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"./jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
 {"key": "MqTv","name": "☎️┃麻雀视频┃摸鱼","type": 3,"api": "csp_MqTv","searchable": 1,"ext": "https://www.mqtv.cc","jar":"./jar/摸鱼.php"},
 
-{"key": "wv_注视影视","name": "🥷┃💥注视影视","api": "csp_WvSpider","type": "3","ext": "./laozhang/注视影视.wv.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-
-	
 ##老张观影
 {"key": "legado_novel","name": "📚┃整合小说源┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","ext": {"class": "LegadoSpider","ext": "./json/sources.json"},"style": {"type": "rect","ratio": 1.33}},
 {"key": "legado","name": "📚┃完本小说┃老张","type": 3,"jar": "./jar/laozhang.jar","api": "csp_ProxySpider","ext": {"class": "LegadoSpider","ext": "./json/sources1.json"},"style": {"type": "rect","ratio": 1.33}},
@@ -103,10 +100,10 @@
 {"key": "Wexlaobaitingshu","name": "🐇┃白兔┃听书","type": 3,"api": "csp_WexlaobaitingshuGuard","ext": "","jar": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/4C1FF0E_773_wex_20251125202938981newMediaImage.png;md5;905b506670b52fb2a680743fb13086fc","searchable": 1,"quickSearch": 1,"filterable": 1},	
 
 {"key": "MDrive","name": "🗂┃饭硬云盘┃配置","type": 3,"api": "csp_MyDriveGuard","changeable": 0,"indexs": 0,"searchable": 1,"style": {"type": "oval"},"ext": {"Cloud-drive": "tvfan/Cloud-drive.txt"}},	
-//{"key": "网盘","name": "🐧┃PG网盘┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d","style": {"type": "rect","ratio": 1.5}},
+{"key": "网盘","name": "🐧┃PG网盘┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar","style": {"type": "rect","ratio": 1.5}},
 {"key": "人人","name": "💗┃人人┃网盘","type": 3,"api": "csp_RenRen","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0,"jar":"https://gh-proxy.org/https://raw.githubusercontent.com/chitue/dongliTV/refs/heads/main/jar/dongli-spider.jar;md5;bef649c9ff45c1b74f1701032a79bf1b"},
 {"key": "商店","name": "🏬┃商店┃更新","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"style": {"type": "oval","ratio": 1.1},"ext": "./market/market.json","jar":"https://gh-proxy.org/https://raw.githubusercontent.com/chitue/dongliTV/refs/heads/main/jar/dongli-spider.jar;md5;bef649c9ff45c1b74f1701032a79bf1b"},
-//{"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d"},
+{"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar"},
 	
 ##PY源系列
 {"key": "瓜子py","name": "🕯️┃瓜子py┃影视","type": 3,"api": "./py/瓜子.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
