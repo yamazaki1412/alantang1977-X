@@ -245,6 +245,10 @@
 {"name": "🎉┃锋哥港台「直播」","type": 0,"url": "https://gh-proxy.org/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆","playerType":1},	
 {"name": "🔫️┃锋哥xTV「直播」","type": 0,"url": "https://gh-proxy.org/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/xxx视频资源","playerType":1},
 
+{"name": "🦄┃jun自建「直播tv」","type":0,"url":"https://timetv.junchao.qzz.io","playerType":1},
+{"name": "🪲┃jun自建「直播tv」","type":0,"url":"http://192.168.110.32:19890/trams.m3u?token=abc123","playerType":1},
+
+	
 ##酷九live直播
 {"name": "🔫️┃松鼠「直播」","type": 0,"ua": "okhttp","url": "https://d.kstore.dev/download/15114/iptv.txt"},
 {"name": "🔫️┃壹米「直播」","type": 0,"url": "https://gitee.com/yimi321/tv/raw/master/tv.png","ua": "okhttp/3.15,AptvPlayer/1.4.0","timeout": 5,"epg": "http://cdn.1678520.xyz/epg/?ch={name}&date={date}","logo": "https://live.fanmingming.cn/tv/{name}.png"},
